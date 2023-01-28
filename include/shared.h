@@ -6,7 +6,7 @@
 
 #include <netdb.h>
 
-void get_local_address(struct addrinfo** address);
+void get_local_address(const char* port, struct addrinfo** address);
 
 int create_socket(const struct addrinfo* address);
 

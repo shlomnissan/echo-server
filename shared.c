@@ -10,14 +10,14 @@
 #include "shared.h"
 #include "config.h"
 
-void get_local_address(struct addrinfo** address) {
+void get_local_address(const char* port, struct addrinfo** address) {
     struct addrinfo hints;
     memset(&hints, 0, sizeof(hints));
     hints.ai_family = AF_INET;
     hints.ai_socktype = SOCK_STREAM;
     hints.ai_flags = AI_PASSIVE;
 
-    if (getaddrinfo(NULL, DEFAULT_PORT, &hints, address)) {
+    if (getaddrinfo(NULL, port, &hints, address)) {
         fprintf(stderr, "getaddrinfo() failed. (%d)\n", errno);
         exit(EXIT_FAILURE);
     }

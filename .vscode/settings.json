@@ -1,6 +1,7 @@
 {
     "cmake.debugConfig": {
         "args": [
+            "8080",
             "select"
         ],
         "type": "lldb",
