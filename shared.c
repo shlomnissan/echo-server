@@ -71,7 +71,10 @@ int accept_connection(int fd_server) {
 int read_and_echo(int fd_client) {
     char read_buffer[MAX_READ_BUFFER];
     long bytes = recv(fd_client, read_buffer, sizeof(read_buffer), 0);
-    if (bytes <= 0) return 1; 
+    if (bytes <= 0) {
+        printf("Client (%d) disconnected\n", fd_client);
+        return 1;
+    } 
     send(fd_client, read_buffer, bytes, 0);
     return 0;
 }

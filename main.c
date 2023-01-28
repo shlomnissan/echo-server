@@ -39,15 +39,12 @@ int main(int argc, char** argv) {
 
     // select multiplexing method
     if (strcmp(method, "select") == 0) {
-        printf("Using select() for synchronous multiplexing.\n");
         using_select(fd_server);
     }
     if (strcmp(method, "poll") == 0) {
-        printf("Using poll() for synchronous multiplexing.\n");
-        // TODO: using_poll(fd_server);
+        using_poll(fd_server);
     }
     if (strcmp(method, "epoll") == 0) {
-        printf("Using epoll() for synchronous multiplexing.\n");
         // TODO: using_epoll(fd_server);
     }
 

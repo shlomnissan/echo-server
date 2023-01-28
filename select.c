@@ -5,13 +5,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/select.h>
-#include <sys/socket.h>
 #include <unistd.h>
 
 #include "shared.h"
 #include "multiplexing.h"
 
 void using_select(int fd_server) {
+    printf("Using select() for synchronous multiplexing.\n");
+
     fd_set master;
     FD_ZERO(&master);
     FD_SET(fd_server, &master);
@@ -36,7 +37,6 @@ void using_select(int fd_server) {
                         // client disconnected
                         FD_CLR(i, &master);
                         close(i);
-                        printf("Client (%d) disconnected\n", i);
                     }
                 }
             }
