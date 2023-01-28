@@ -2,7 +2,7 @@
     "cmake.debugConfig": {
         "args": [
             "8080",
-            "select"
+            "epoll"
         ],
         "type": "lldb",
         "request": "launch",

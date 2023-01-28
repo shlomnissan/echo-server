@@ -45,7 +45,7 @@ int main(int argc, char** argv) {
         using_poll(fd_server);
     }
     if (strcmp(method, "epoll") == 0) {
-        // TODO: using_epoll(fd_server);
+        using_epoll(fd_server);
     }
 
     close(fd_server);

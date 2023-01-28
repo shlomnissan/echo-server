@@ -11,6 +11,7 @@ set(SOURCES
     shared.c
     select.c
     poll.c
+    epoll.c
 )
 
 add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})

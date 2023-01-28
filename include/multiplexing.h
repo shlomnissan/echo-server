@@ -8,6 +8,6 @@ void using_select(int fd_server);
 
 void using_poll(int fd_server);
 
-// void using_epoll(int fd_server);
+void using_epoll(int fd_server);
 
 #endif  // ECHO_SERVER_MULTIPLEXING_H

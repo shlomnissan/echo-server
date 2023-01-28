@@ -10,13 +10,13 @@
 #include "shared.h"
 #include "multiplexing.h"
 
-void add_to_pfds(struct pollfd *pfds[], int fd_client, int *fd_count, int *fd_size) {
+void add_to_pfds(struct pollfd *pfds[], int fd, int *fd_count, int *fd_size) {
     if (*fd_count == *fd_size) {
         (*fd_size) *= 2;
         *pfds = realloc(*pfds, sizeof(**pfds) * (*fd_size));
     }
 
-    (*pfds)[(*fd_count)].fd = fd_client;
+    (*pfds)[(*fd_count)].fd = fd;
     (*pfds)[(*fd_count)].events = POLLIN;
     (*fd_count)++;
 }
