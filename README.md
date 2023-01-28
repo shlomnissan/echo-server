@@ -13,7 +13,7 @@ echo_server 8080 epoll
 - `arg[1]` the port you want the server to bind to.
 - `arg[2]` the multiplexing method you want to use (select, poll, or epoll).
 
-Both areguments are required.
+Both arguments are required.
 
 The simplest way to test the server is using `telnet`.
 
