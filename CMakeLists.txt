@@ -9,9 +9,9 @@ include_directories(include)
 set(SOURCES
     main.c
     shared.c
-    select.c
-    poll.c
-    epoll.c
+    multiplexing/select.c
+    multiplexing/poll.c
+    multiplexing/epoll.c
 )
 
 add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})
