@@ -32,16 +32,11 @@ void using_select(int fd_server) {
                     if (fd_client > nfds) nfds = fd_client;
                 } else {
                     // read from a client socket
-                    char read_buffer[1024];
-                    long bytes = recv(i, read_buffer, sizeof(read_buffer), 0);
-                    if (bytes == 0) {
+                    if (read_and_echo(i)) {
                         // client disconnected
                         FD_CLR(i, &master);
                         close(i);
                         printf("Client (%d) disconnected\n", i);
-                    } else {
-                        // echo
-                        send(i, read_buffer, bytes, 0);
                     }
                 }
             }

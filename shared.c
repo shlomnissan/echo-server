@@ -50,8 +50,8 @@ void start_listening(int fd_server) {
 }
 
 int accept_connection(int fd_server) {
-    socklen_t client_len;
     struct sockaddr_storage client_address;
+    socklen_t client_len = sizeof(client_address);
     int fd_client = accept(fd_server, (struct sockaddr*)&client_address, &client_len);
     if (!fd_client) {
         fprintf(stderr, "accept() failed. (%d)\n", errno);
@@ -66,4 +66,12 @@ int accept_connection(int fd_server) {
     );
     printf("Accepted a new connection from %s\n", address_buffer);
     return fd_client;
+}
+
+int read_and_echo(int fd_client) {
+    char read_buffer[MAX_READ_BUFFER];
+    long bytes = recv(fd_client, read_buffer, sizeof(read_buffer), 0);
+    if (bytes <= 0) return 1; 
+    send(fd_client, read_buffer, bytes, 0);
+    return 0;
 }

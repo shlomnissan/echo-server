@@ -14,4 +14,6 @@ void start_listening(int fd_server);
 
 int accept_connection(int fd_server);
 
+int read_and_echo(int fd_client);
+
 #endif  // ECHO_SERVER_SHARED_H

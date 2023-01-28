@@ -6,5 +6,6 @@
 
 #define DEFAULT_PORT "8080"
 #define MAX_BACKLOG 128
+#define MAX_READ_BUFFER 1024
 
 #endif  // ECHO_SERVER_CONFIG_H
