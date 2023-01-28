@@ -1,4 +1,4 @@
-# 📢 tcp-echo-server
+# 📢 echo-server
 
 This project is a simple implementation of a TCP echo server using BSD sockets that I put together to explore different methods of synchronous I/O multiplexing in a Linux environment.
 
