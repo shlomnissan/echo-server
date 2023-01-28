@@ -17,8 +17,6 @@ Both arguments are required.
 
 The simplest way to test the server is using `telnet`.
 
-![telnet](https://user-images.githubusercontent.com/3165988/215295925-9b630c2f-8e55-42f4-b795-5c4ecc4dc59e.gif)
-
 ## Synchronous I/O multiplexing methods
 
 | Method  | Summary |
