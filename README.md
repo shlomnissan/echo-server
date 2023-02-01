@@ -31,7 +31,8 @@ The simplest way to test the server is using `telnet`.
  / /_/ /  __/ /_/ /_/ / / / / / / /_/ / /  / ,<   
 /_____/\___/\__/\__,_/_/ /_/ /_/\__,_/_/  /_/|_|  
                                                   
-Copyright (c) 2023 Betamark
+Copyright (c) 2023 Shlomi Nissan
+https://betamark.com
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
